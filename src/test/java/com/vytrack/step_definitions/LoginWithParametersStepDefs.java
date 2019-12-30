@@ -29,8 +29,6 @@ public class LoginWithParametersStepDefs {
         Assert.assertTrue(Driver.get().getTitle().contains(title));
     }
 
-
-
     @Given("a driver is logged in")
     public void a_driver_is_logged_in() {
         Driver.get().get(ConfigurationReader.get("url"));
@@ -38,17 +36,6 @@ public class LoginWithParametersStepDefs {
         String password = ConfigurationReader.get("driver_password");
         new LoginPage().login(username, password);
     }
-
-
-
-
-
-
-
-
-
-
-
 
     @When("the user goes to {string} {string}")
     public void the_user_goes_to(String tab, String module) {
