@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
-
+// git test purposes
     public LoginPage(){
         PageFactory.initElements(Driver.get(), this);
     }
