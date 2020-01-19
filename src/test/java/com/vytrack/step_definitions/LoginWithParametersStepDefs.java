@@ -26,8 +26,10 @@ public class LoginWithParametersStepDefs {
     public void the_title_should_contain(String title) {
         System.out.println("title = " + title);
         BrowserUtils.waitFor(3);
-        Assert.assertTrue(Driver.get().getTitle().contains(title));
+        Assert.assertTrue("Actual title: " + Driver.get().getTitle(), Driver.get().getTitle().contains(title));
     }
+
+
 
     @Given("a driver is logged in")
     public void a_driver_is_logged_in() {
@@ -36,6 +38,17 @@ public class LoginWithParametersStepDefs {
         String password = ConfigurationReader.get("driver_password");
         new LoginPage().login(username, password);
     }
+
+
+
+
+
+
+
+
+
+
+
 
     @When("the user goes to {string} {string}")
     public void the_user_goes_to(String tab, String module) {
